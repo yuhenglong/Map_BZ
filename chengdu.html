@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>云股传媒</title>
+
+    <link type="text/css" rel="stylesheet" href="css/bdmapStyle.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <section class="section-bdmap">
+        <div class="map-search">
+            <div class="one">
+                <input type="text" id="s_i_map" placeholder="地点名" onFocus="this.placeholder=''" onBlur="this.placeholder='地点名'">
+                <button type="button" id="btn_search_map">搜索</button></div>
+
+            <div class="one">
+                <label class="tit">成都云股传媒广告投放点</label>
+            </div>
+
+            <div class="one" style="display:none;">
+                <button id="btn" type="button" class="coust" style="display:none;">点位统计</button>
+                <span class="span-dis" style="display:none;">切换区域：</span>
+                <div class="select_box" style="display:none;">
+                    <select name="selector" id="selector">
+                    <option value="all">全部</option>
+                    <option value="天河区">天河区</option>
+                    <option value="越秀区">越秀区</option>
+                    <option value="荔湾区">荔湾区</option>
+                    <option value="白云区">白云区</option>
+                    <option value="海珠区">海珠区</option>
+                    <option value="黄埔区">黄埔区</option>
+                    <option value="花都区">花都区</option>
+                    <option value="番禺区">番禺区</option>
+                    <option value="南沙区">南沙区</option>
+                </select>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="mengban">
+        <div class="con_box ov">
+            <i class="close fr"></i>
+            <div id="container" style="height: 100%"></div>
+        </div>
+    </div>
+    <section id="allmap"></section>
+
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.bdmap_cd.js"></script>
+
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=9eON9w7lfoGPM7dkhypB3Cw4E2zOWpAR"></script>
+
+<script type="text/javascript" src="js/bd/TextIconOverlay_min.js"></script>
+<script type="text/javascript" src="js/bd/MarkerClusterer_min.js"></script>
+<script type="text/javascript">
+    var $imgDir = 'img_cd/';
+    var $yjzc_zb = "104.074025,30.558212";
+
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = " / ";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+
+    const date = getNowFormatDate();
+
+
+    var map = new BMap.Map("allmap", {
+        enableMapClick: false
+    });
+    BDMapInit(map, {
+        "isNumc": 1,
+        "city": "成都",
+        "point": $yjzc_zb,
+        "zoom": "15",
+        "copyright": date
+    });
+
+    function loadPointData(dataJson, paramJson) {
+        eachPoint(dataJson, paramJson);
+        map.addEventListener("zoomend", function() {
+            var ZoomNum = map.getZoom();
+            var markerClusterer;
+            if (ZoomNum < 15) {
+
+                map.clearOverlays();
+                var markers = [];
+
+                $.each(dataJson.data, function(i, item) {
+                    const addressArr = dataJson.data[i].yjzc_zb.split(",");
+                    const obj_option = {};
+                    obj_option.image = dataJson.data[i].image;
+                    obj_option.title = dataJson.data[i].title;
+                    obj_option.detail = dataJson.data[i].detail;
+                    obj_option.equipment = dataJson.data[i].equipment;
+                    obj_option.visitor_count = dataJson.data[i].visitor_count;
+
+                    var point = new BMap.Point(addressArr[0], addressArr[1]);
+                    var marker = new BMap.Marker(point);
+                    addClickHandler(marker, dataJson, paramJson, point, obj_option);
+
+                    markers.push(marker);
+
+                });
+
+
+                markerClusterer = new BMapLib.MarkerClusterer(map, {
+                    markers: markers
+                });
+
+            } else {
+                eachPoint(dataJson, paramJson);
+            }
+        })
+
+    }
+
+    function addClickHandler(marker, dataJson, paramJson, point, obj_option) {
+        marker.addEventListener("click", function() {
+            openWinInfo(marker, dataJson, paramJson, point, obj_option);
+        });
+    }
+
+    function openWinInfo(marker, dataJson, paramJson, point, obj_option) {
+
+        const isPCequipt = document.body.clientWidth > 450;
+        let opts;
+        if (isPCequipt) {
+            opts = {
+                width: 450,
+                height: 550,
+                title: obj_option.title,
+                enableMessage: true
+            };
+        } else {
+            opts = {
+                width: 250,
+                height: 400,
+                title: obj_option.title,
+                enableMessage: true
+            };
+        }
+
+        var content = '<div class="bdInfoWindow">' + "<img src='./img_cd/" + obj_option.image + "'>" + "<p>介绍：" + obj_option.detail + " </p>" + "<p>设备：" + obj_option.equipment + " 台<p/>" + "<p>人流量：" + obj_option.visitor_count + " 人次/天<p/>" + '</div>';
+        var infoWindow = new BMap.InfoWindow(content, opts);
+
+        map.openInfoWindow(infoWindow, point);
+    }
+
+
+    function eachPoint(dataJson, paramJson) {
+        map.clearOverlays();
+
+        for (var i = 0; i < dataJson.data.length; i++) {
+            var $json = dataJson.data[i];
+            var title = $json.title,
+                description = $json.detail,
+                image = $json.image,
+                visitor_count = $json.visitor_count,
+                equipment = $json.equipment,
+                zuobiao = $json.yjzc_zb.split(','),
+                l_point = zuobiao[0],
+                r_point = zuobiao[1];
+
+            var img = '',
+                style = '';
+            if ($json.color == '1') {
+                img = 'icon_locate_red.png';
+                style = "red";
+            }
+            if ($json.color == '2') {
+                img = 'icon_locate_blue.png';
+                style = "blue";
+            }
+            if ($json.color == '3') {
+                img = 'icon_locate_green.png';
+                style = "green";
+            }
+
+            if (img != '') img = $imgDir + img;
+
+            var $pointJson = {
+                "l_point": l_point,
+                "r_point": r_point,
+                "title": title,
+                "description": description,
+                "style": style,
+                "icon": img,
+                "image": image,
+                "visitor_count": visitor_count,
+                "equipment": equipment
+            }
+            createMapPoint($pointJson, paramJson);
+
+        }
+    }
+
+    $(function() {
+
+        var $coordinateJson = {
+            data: [{
+                title: "云股传媒成都分公司",
+                detail: "地址:成都市高新天府大道中段530号东方希望天祥广场B座4202号",
+                yjzc_zb: "104.074025,30.558212",
+                color: '2',
+                image: 'ygcm.png',
+                visitor_count: 40000,
+                equipment: 0,
+                downtown: "高新区"
+            }, {
+                title: "福地广场家乐福",
+                detail: "成都市新都区大丰镇大天路439号",
+                yjzc_zb: "104.073742,30.765344",
+                image: 'fdgclf.png',
+                visitor_count: 40000,
+                equipment: 7,
+                downtown: "新都区"
+            }, {
+                title: "下一站都市",
+                detail: "成都市武侯区武阳大道三段51号",
+                yjzc_zb: "104.029297,30.63133",
+                image: 'xyzds.png',
+                visitor_count: 50000,
+                equipment: 6,
+                downtown: "武侯区"
+            }, {
+                title: "金阳不夜都",
+                detail: "成都市武侯区西三环三段内侧草金立交旁万顺二路155号",
+                yjzc_zb: "103.992218,30.656781",
+                image: 'jybyd.png',
+                visitor_count: 80000,
+                equipment: 5,
+                downtown: "武侯区"
+            }, {
+                title: "富顿中心",
+                detail: "成都市武侯区金履二路167号",
+                yjzc_zb: "103.991484,30.609422",
+                image: 'fdzx.png',
+                visitor_count: 50000,
+                equipment: 6,
+                downtown: "武侯区"
+            }, {
+                title: "蓝光·韩国城",
+                detail: "成都市双流区珠江路600号",
+                yjzc_zb: "104.015035,30.578842",
+                image: 'lghgc.png',
+                visitor_count: 90000,
+                equipment: 30,
+                downtown: "双流区"
+            }, {
+                title: "光华中心广场",
+                detail: "成都市青羊区光华北三路88号",
+                yjzc_zb: "103.970289,30.676356",
+                image: 'ghzxgc.png',
+                visitor_count: 60000,
+                equipment: 8,
+                downtown: "青羊区"
+            }, {
+                title: "金色夏威夷",
+                detail: "成都市青羊区长顺下街与西街交汇处",
+                yjzc_zb: "104.063112,30.679026",
+                image: 'jsxwy.png',
+                visitor_count: 40000,
+                equipment: 3,
+                downtown: "青羊区"
+            }, {
+                title: "中铁瑞成·远东百货",
+                detail: "成都市青羊区人民中路二段68号",
+                yjzc_zb: "104.072172,30.676218",
+                image: 'ztrcds.png',
+                visitor_count: 70000,
+                equipment: 1,
+                downtown: "青羊区"
+            }, {
+                title: "顺吉大厦",
+                detail: "成都市青羊区顺城大街252号",
+                yjzc_zb: "104.077672,30.670148",
+                image: 'sjds.png',
+                visitor_count: 50000,
+                equipment: 2,
+                downtown: "青羊区"
+            }, {
+                title: "蜀都万达广场",
+                detail: "成都市郫都区望丛东路109号",
+                yjzc_zb: "103.911424,30.813793",
+                image: 'sdwdgc.png',
+                visitor_count: 90000,
+                equipment: 10,
+                downtown: "郫都区"
+            }, {
+                title: "龙湖时代天街",
+                detail: "成都市高新西区合作路89号",
+                yjzc_zb: "103.927166,30.760248",
+                image: 'lhsdtj.png',
+                visitor_count: 50000,
+                equipment: 19,
+                downtown: "郫都区"
+            }, {
+                title: "重百汉正广场",
+                detail: "成都市郫都区杜鹃路46号",
+                yjzc_zb: "103.905931,30.804035",
+                image: 'cbhzgc.png',
+                visitor_count: 70000,
+                equipment: 4,
+                downtown: "郫都区"
+            }, {
+                title: "花好月圆广场",
+                detail: "成都市金牛区蜀汉路89号",
+                yjzc_zb: "104.034928,30.690432",
+                image: 'hhyy.png',
+                visitor_count: 60000,
+                equipment: 2,
+                downtown: "金牛区"
+            }, {
+                title: "中央天地广场",
+                detail: "成都市金牛区五块石商贸大道48号",
+                yjzc_zb: "104.071495,30.713889",
+                image: 'zytdgc.png',
+                visitor_count: 70000,
+                equipment: 19,
+                downtown: "金牛区"
+            }, {
+                title: "瑞升城北橡树林",
+                detail: "成都市金牛区解放路一段20号",
+                yjzc_zb: "104.09151,30.691798",
+                image: 'rscbxsl.png',
+                visitor_count: 60000,
+                equipment: 6,
+                downtown: "金牛区"
+            }, {
+                title: "龙湖金楠天街",
+                detail: "成都市高新区晋阳路313号",
+                yjzc_zb: "104.002582,30.654622",
+                image: 'lhjntj.png',
+                visitor_count: 50000,
+                equipment: 1,
+                downtown: "高新区"
+            }, {
+                title: "泛悦国际",
+                detail: "成都市高新区武侯科华中路与长荣路交汇处(科华之星旁)",
+                yjzc_zb: "104.085851,30.61984",
+                image: 'fygj.png',
+                visitor_count: 50000,
+                equipment: 3,
+                downtown: "高新区"
+            }, {
+                title: "花样年香年广场",
+                detail: "成都市高新区吉泰五路88号",
+                yjzc_zb: "104.072875,30.550893",
+                image: 'hynxngc.png',
+                visitor_count: 60000,
+                equipment: 2,
+                downtown: "高新区"
+            }, {
+                title: "东立国际广场",
+                detail: "成都市成华区羊子山路68号",
+                yjzc_zb: "104.102034,30.708957",
+                image: 'dlgjgc.png',
+                visitor_count: 50000,
+                equipment: 8,
+                downtown: "成华区"
+            }, {
+                title: "融锦城",
+                detail: "成都市成华区羊子山西路88号",
+                yjzc_zb: "104.103544,30.71121",
+                image: 'rjc.png',
+                visitor_count: 60000,
+                equipment: 8,
+                downtown: "成华区"
+            }, {
+                title: "上寓广场（鼎城上都）",
+                detail: "成都市成华区二仙桥东路48号",
+                yjzc_zb: "104.138253,30.681297",
+                image: 'dcsd.png',
+                visitor_count: 50000,
+                equipment: 5,
+                downtown: "成华区"
+            }, {
+                title: "蓝光·东方天地",
+                detail: "成都市成华区崔家店路52号",
+                yjzc_zb: "104.135338,30.666997",
+                image: 'lgdftd.png',
+                visitor_count: 60000,
+                equipment: 4,
+                downtown: "成华区"
+            }, {
+                title: "上古天地",
+                detail: "成都市成华区龙潭路33号",
+                yjzc_zb: "104.172273,30.710863",
+                image: 'sgtd.png',
+                visitor_count: 50000,
+                equipment: 9,
+                downtown: "成华区"
+            }, {
+                title: "阳光100米娅中心",
+                detail: "成都市成华区塔山路东2.5环迎晖路交汇处",
+                yjzc_zb: "104.149868,30.644446",
+                image: 'ygmyzx.png',
+                visitor_count: 60000,
+                equipment: 9,
+                downtown: "成华区"
+            }, {
+                title: "融创Nano",
+                detail: "成都市天府新区华阳伏龙北巷",
+                yjzc_zb: "104.065462,30.539515",
+                image: 'rcnano.png',
+                visitor_count: 70000,
+                equipment: 6,
+                downtown: "天府新区"
+            }, {
+                title: "成都北京街",
+                detail: "成都市天府新区华阳街道府河路二段",
+                yjzc_zb: "104.065351,30.501728",
+                image: 'bjj.png',
+                visitor_count: 50000,
+                equipment: 3,
+                downtown: "天府新区"
+            }, {
+                title: "同森金棕榈",
+                detail: "成都市天府新区华阳街道协和下街588号",
+                yjzc_zb: "104.050097,30.523399",
+                image: 'tsjzj.png',
+                visitor_count: 70000,
+                equipment: 5,
+                downtown: "天府新区"
+            }]
+        }
+
+        loadPointData($coordinateJson, {
+            "showDetails": false
+        });
+
+        $('#s_i_map').on('keydown', function(e) {
+            if (e.keyCode == 13) {
+                $('#btn_search_map').click();
+            }
+        });
+
+        function EchartsClick() {
+
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+            option = {
+                title: {
+                    text: '广告分布饼状图',
+                    subtext: '广州市',
+                    x: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['越秀区', '海珠区', '荔湾区', '天河区', '白云区', '黄埔区', '花都区', '番禺区', '南沙区']
+                },
+                series: [{
+                    name: '区域点位数',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    label: {
+                        normal: {
+                            formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                            backgroundColor: '#eee',
+                            borderColor: '#aaa',
+                            borderWidth: 1,
+                            borderRadius: 4,
+
+                            rich: {
+                                a: {
+                                    color: '#999',
+                                    lineHeight: 22,
+                                    align: 'center'
+                                },
+
+                                hr: {
+                                    borderColor: '#aaa',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                b: {
+                                    fontSize: 16,
+                                    lineHeight: 33
+                                },
+                                per: {
+                                    color: '#eee',
+                                    backgroundColor: '#334455',
+                                    padding: [2, 4],
+                                    borderRadius: 2
+                                }
+                            }
+                        }
+                    },
+                    data: [{
+                        value: 15,
+                        name: '越秀区'
+                    }, {
+                        value: 17,
+                        name: '海珠区'
+                    }, {
+                        value: 4,
+                        name: '荔湾区'
+                    }, {
+                        value: 31,
+                        name: '天河区'
+                    }, {
+                        value: 25,
+                        name: '白云区'
+                    }, {
+                        value: 10,
+                        name: '黄埔区'
+                    }, {
+                        value: 1,
+                        name: '花都区'
+                    }, {
+                        value: 22,
+                        name: '番禺区'
+                    }, {
+                        value: 1,
+                        name: '南沙区'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }],
+
+            };;
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+        }
+
+        $('#btn').click(function() {
+            $('.mengban').show();
+            EchartsClick();
+        });
+
+        $('.close').click(function() {
+            $('.mengban').hide();
+        })
+        $('.mengban').click(function() {
+            $('.mengban').hide();
+        })
+        $('.con_box').click(function(e) {
+
+            e.stopPropagation();
+        })
+
+        $("#selector").change(function() {
+            const text = $(this).find("option:selected").val();
+            const newArr = [];
+            $coordinateJson.data.forEach(function(item) {
+
+                if (item.downtown == text) {
+                    newArr.push(item);
+                };
+                const obj = {};
+                obj.data = newArr;
+
+                map.clearOverlays();
+
+                loadPointData(obj, {
+                    "showDetails": false
+                });
+            })
+        })
+
+        function myFun() {
+
+            var size = new BMap.Size(30, 30);
+            var iconOptions = {
+                anchor: new BMap.Size(5, 10)
+            }
+            var icon = new BMap.Icon('./img_cd/icon_locate_green.png', size, iconOptions);
+            const $iconJson = {
+                "icon": icon
+            }
+            var pp = local.getResults().getPoi(0).point;
+            map.centerAndZoom(pp, 18);
+            map.addOverlay(new BMap.Marker(pp, $iconJson));
+
+        }
+
+        var btnSearch = document.getElementById("btn_search_map");
+        btnSearch.addEventListener("click", function() {
+            map.clearOverlays();
+            local = new BMap.LocalSearch(map, {
+                onSearchComplete: myFun
+            });
+            local.search(document.getElementById("s_i_map").value);
+        });
+
+    });
+</script>
