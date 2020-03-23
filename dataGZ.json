@@ -1,0 +1,1346 @@
+{
+    "data": [
+        {
+            "title": "云股传媒有限公司",
+            "detail": "云股传媒，通过建立裸眼3D广告联网云投播平台，用科技为大家展现出三维视觉盛宴。通过裸眼3D技术创新和模式创新，让受众感受到现代广告的真实感，&nbsp;让广告主更好的打造品牌，实现品牌的传播。",
+            "yjzc_zb": "113.341145,23.131629",
+            "color": "2",
+            "image": "ygcm.png",
+            "visitor_count": 20000,
+            "equipment": 0,
+            "downtown": "天河区"
+        },
+        {
+            "title": "番禺海印潮楼",
+            "detail": "广州市番禺区兴南大道445号环境大厦",
+            "yjzc_zb": "113.371537,23.022211",
+            "image": "pycl.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "广百广场（荔胜店）",
+            "detail": "广州市荔湾区花地大道与龙溪大道交汇处",
+            "yjzc_zb": "113.239795,23.083794",
+            "image": "gbgc.png",
+            "visitor_count": 40000,
+            "equipment": 8,
+            "downtown": "荔湾区"
+        },
+        {
+            "title": "城投地产花城金沙汇",
+            "detail": "广州市白云区金沙洲路111号",
+            "yjzc_zb": "113.212773,23.163642",
+            "image": "jsh.png",
+            "visitor_count": 20000,
+            "equipment": 15,
+            "downtown": "白云区"
+        },
+        {
+            "title": "嘉鼎创客写字楼",
+            "detail": "广州市白云区彭江路168号",
+            "yjzc_zb": "113.283069,23.234309",
+            "image": "jdck.png",
+            "visitor_count": 20000,
+            "equipment": 1,
+            "downtown": "白云区"
+        },
+        {
+            "title": "星汇广场",
+            "detail": "广州市白云区嘉禾街鹤鳌公路501号",
+            "yjzc_zb": "113.279261,23.235483",
+            "image": "xhgc.png",
+            "visitor_count": 30000,
+            "equipment": 5,
+            "downtown": "白云区"
+        },
+        {
+            "title": "佳润广场",
+            "detail": "广州市白云区广州大道北1419号",
+            "yjzc_zb": "113.326843,23.187295",
+            "image": "rjgc.png",
+            "visitor_count": 30000,
+            "equipment": 8,
+            "downtown": "白云区"
+        },
+        {
+            "title": "睿晟国际",
+            "detail": "广州市白云区增槎路787号",
+            "yjzc_zb": "113.231892,23.181501",
+            "image": "rcgj.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "白云区"
+        },
+        {
+            "title": "星华荟商业广场",
+            "detail": "广州市番禺区X939(钟屏岔道)",
+            "yjzc_zb": "113.328128,22.974586",
+            "image": "xhh.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "GOGO新天地",
+            "detail": "广州市番禺区贝岗村大街1号",
+            "yjzc_zb": "113.398443,23.068241",
+            "image": "ggxtd.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "白云汇广场",
+            "detail": "广州市白云区黄石东路88号",
+            "yjzc_zb": "113.275631,23.209274",
+            "image": "byh.png",
+            "visitor_count": 30000,
+            "equipment": 18,
+            "downtown": "白云区"
+        },
+        {
+            "title": "东城广场",
+            "detail": "广州市黄埔区黄埔东路1-9号东城广场一层",
+            "yjzc_zb": "113.45569,23.106834",
+            "image": "dcgc.png",
+            "visitor_count": 40000,
+            "equipment": 8,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "点都德（摩登百货店）",
+            "detail": "广州市花都区建设北路72号摩登百货F5",
+            "yjzc_zb": "113.211254,23.39195",
+            "image": "mdbhhd.png",
+            "visitor_count": 20000,
+            "equipment": 7,
+            "downtown": "花都区"
+        },
+        {
+            "title": "潮联广场",
+            "detail": "广州市\t番禺区 大北路438号",
+            "yjzc_zb": "113.377285,22.956901",
+            "image": "clds.png",
+            "visitor_count": 30000,
+            "equipment": 2,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "潮联商务中心",
+            "detail": "广州市番禺区桥兴大道403号",
+            "yjzc_zb": "113.364594,22.959153",
+            "image": "clswzx.png",
+            "visitor_count": 30000,
+            "equipment": 1,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "优托邦驿站(科学城店)",
+            "detail": "广州市黄埔区科学城科学大道193号",
+            "yjzc_zb": "113.45924,23.173675",
+            "image": "ytb.png",
+            "visitor_count": 40000,
+            "equipment": 12,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "时代城",
+            "detail": "广州市黄埔区宏明路263号",
+            "yjzc_zb": "113.550008,23.117974",
+            "image": "sdc.png",
+            "visitor_count": 30000,
+            "equipment": 10,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "保利绿地大都汇",
+            "detail": "广州市南沙区金隆路35号",
+            "yjzc_zb": "113.551525,22.801928",
+            "image": "blld.png",
+            "visitor_count": 40000,
+            "equipment": 11,
+            "downtown": "南沙区"
+        },
+        {
+            "title": "得利达广场",
+            "detail": "广州市天河区大观中路385号",
+            "yjzc_zb": "113.420087,23.16893",
+            "image": "dldgc.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "保利天悦",
+            "detail": "广州市海珠区琶洲村新马路",
+            "yjzc_zb": "113.386343,23.108756",
+            "image": "blty.png",
+            "visitor_count": 30000,
+            "equipment": 7,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "M+Park漫广场",
+            "detail": "广州市天河区中山大道中1242号",
+            "yjzc_zb": "113.43117,23.118392",
+            "image": "mgc.png",
+            "visitor_count": 40000,
+            "equipment": 14,
+            "downtown": "天河区"
+        },
+        {
+            "title": "珠水能源大厦",
+            "detail": "广州市天河区黄埔大道西365号",
+            "yjzc_zb": "113.344108,23.132884",
+            "image": "zsnyds.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "黄埔潮楼名店城",
+            "detail": "广州市黄埔区大沙地西路311号",
+            "yjzc_zb": "113.452954,23.109662",
+            "image": "hpcl.png",
+            "visitor_count": 50000,
+            "equipment": 6,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "惠润广场",
+            "detail": "广州市黄埔区黄埔东路298号",
+            "yjzc_zb": "113.462864,23.106247",
+            "image": "rhgc.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "东平时代都荟",
+            "detail": "广州市白云区东平中路5号",
+            "yjzc_zb": "113.315873,23.254143",
+            "image": "dpsddh.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "白云区"
+        },
+        {
+            "title": "凯德广场",
+            "detail": "广州市\t白云区 云城西路890号",
+            "yjzc_zb": "113.276011,23.187241",
+            "image": "kdgc.png",
+            "visitor_count": 40000,
+            "equipment": 33,
+            "downtown": "白云区"
+        },
+        {
+            "title": "红大装饰材料市场",
+            "detail": "广州市白云区均禾大道自编513号",
+            "yjzc_zb": "113.310256,23.254653",
+            "image": "hdzscl.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "白云区"
+        },
+        {
+            "title": "越丽国际",
+            "detail": "广州市白云区机场路10号",
+            "yjzc_zb": "113.270648,23.160615",
+            "image": "zlgj.png",
+            "visitor_count": 20000,
+            "equipment": 5,
+            "downtown": "白云区"
+        },
+        {
+            "title": "亮帆大厦",
+            "detail": "广州市白云区广云路25号",
+            "yjzc_zb": "113.289242,23.219578",
+            "image": "lfds.png",
+            "visitor_count": 20000,
+            "equipment": 4,
+            "downtown": "白云区"
+        },
+        {
+            "title": "凯升国际广场",
+            "detail": "广州市白云区西槎路221号",
+            "yjzc_zb": "113.241447,23.175344",
+            "image": "ksgjgc.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "白云区"
+        },
+        {
+            "title": "京富国际大厦",
+            "detail": "广州市白云区松园中西街23号",
+            "yjzc_zb": "113.263475,23.252887",
+            "image": "jfgjds.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "白云区"
+        },
+        {
+            "title": "骐利广场",
+            "detail": "广州市白云区西槎路99号",
+            "yjzc_zb": "113.241488,23.161497",
+            "image": "qlgc.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "白云区"
+        },
+        {
+            "title": "鸿盛商业城",
+            "detail": "广州市白云区三元里大道1231号",
+            "yjzc_zb": "113.257106,23.185914",
+            "image": "hssyc.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "白云区"
+        },
+        {
+            "title": "龙禧中心",
+            "detail": "广州市白云区启德路36号",
+            "yjzc_zb": "113.29577,23.234221",
+            "image": "lxgc.png",
+            "visitor_count": 40000,
+            "equipment": 20,
+            "downtown": "白云区"
+        },
+        {
+            "title": "5号停机坪购物广场",
+            "detail": "广州市白云区云霄路353号",
+            "yjzc_zb": "113.27162,23.187202",
+            "image": "whtjp.png",
+            "visitor_count": 30000,
+            "equipment": 11,
+            "downtown": "白云区"
+        },
+        {
+            "title": "学山文化创意谷A区-2栋",
+            "detail": "广州市\t白云区 永平街学山塘大街81号",
+            "yjzc_zb": "113.311251,23.222593",
+            "image": "xswh.png",
+            "visitor_count": 20000,
+            "equipment": 5,
+            "downtown": "白云区"
+        },
+        {
+            "title": "新都汇购物广场",
+            "detail": "广州市白云区西槎路96号",
+            "yjzc_zb": "113.242973,23.163989",
+            "image": "xdh.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "白云区"
+        },
+        {
+            "title": "五月花商业广场",
+            "detail": "广州市越秀区中山五路68号",
+            "yjzc_zb": "113.273466,23.13209",
+            "image": "wyh.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "大马站商业中心写字楼",
+            "detail": "广州市越秀区中山五路33",
+            "yjzc_zb": "113.27436,23.1315",
+            "image": "dmzsyzx.png",
+            "visitor_count": 40000,
+            "equipment": 4,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "丽丰中心",
+            "detail": "广州市越秀区东风东路761号",
+            "yjzc_zb": "113.315968,23.138662",
+            "image": "lfzx.png",
+            "visitor_count": 70000,
+            "equipment": 14,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "府前铭泰公馆",
+            "detail": "广州市越秀区中山五路217－255号",
+            "yjzc_zb": "113.269423,23.131192",
+            "image": "fqmt.png",
+            "visitor_count": 40000,
+            "equipment": 3,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "中国民间金融大厦",
+            "detail": "广州市越秀区长堤大马路316号",
+            "yjzc_zb": "113.265176,23.117373",
+            "image": "mjjr.png",
+            "visitor_count": 40000,
+            "equipment": 6,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "骏亿外贸城",
+            "detail": "广州市越秀区西湖路38号",
+            "yjzc_zb": "113.273886,23.129593",
+            "image": "jywmc.png",
+            "visitor_count": 40000,
+            "equipment": 8,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "港润大厦",
+            "detail": "广州市越秀区越秀南路208号",
+            "yjzc_zb": "113.284204,23.128515",
+            "image": "grds.png",
+            "visitor_count": 40000,
+            "equipment": 6,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "金佰利广场",
+            "detail": "广州市越秀区文明路63号",
+            "yjzc_zb": "113.277394,23.128625",
+            "image": "jblgc.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "金德大厦",
+            "detail": "广州市越秀区文德路67号",
+            "yjzc_zb": "113.278248,23.128841",
+            "image": "jdds.png",
+            "visitor_count": 50000,
+            "equipment": 2,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "海印摄影城",
+            "detail": "广州市越秀区东华南路96号1-4层",
+            "yjzc_zb": "113.290758,23.124117",
+            "image": "hysyc.png",
+            "visitor_count": 30000,
+            "equipment": 5,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "捷登都会",
+            "detail": "广州市\t越秀区 中山五路68号",
+            "yjzc_zb": "113.272413,23.132123",
+            "image": "jddh.png",
+            "visitor_count": 60000,
+            "equipment": 6,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "星光映景",
+            "detail": "广州市越秀区水荫路119号",
+            "yjzc_zb": "113.317905,23.149074",
+            "image": "xgyj.png",
+            "visitor_count": 30000,
+            "equipment": 11,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "广州玉鸣轩艺博城",
+            "detail": "广州市越秀区中山四路319号(近文德路)",
+            "yjzc_zb": "113.278022,23.131855",
+            "image": "ymxybc.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "景腾商业大厦",
+            "detail": "广州市越秀区惠福东路455号",
+            "yjzc_zb": "113.273102,23.127653",
+            "image": "jtsy.png",
+            "visitor_count": 20000,
+            "equipment": 1,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "保利威座大厦",
+            "detail": "广州市\t天河区 冼村路11号",
+            "yjzc_zb": "113.333593,23.127199",
+            "image": "blwz.png",
+            "visitor_count": 50000,
+            "equipment": 7,
+            "downtown": "天河区"
+        },
+        {
+            "title": "天河·新天地",
+            "detail": "广东省广州市天河区天源路(地铁3、6号线天河客运站A、D出口)",
+            "yjzc_zb": "113.350392,23.177609",
+            "image": "thxtd.png",
+            "visitor_count": 30000,
+            "equipment": 12,
+            "downtown": "天河区"
+        },
+        {
+            "title": "朗润广场",
+            "detail": "广州市天河区天河东路220号1-5层",
+            "yjzc_zb": "113.340712,23.142051",
+            "image": "lrgc.png",
+            "visitor_count": 30000,
+            "equipment": 7,
+            "downtown": "天河区"
+        },
+        {
+            "title": "摩登百货(岗顶店)",
+            "detail": "广州市天河区天河路611号",
+            "yjzc_zb": "113.345821,23.141146",
+            "image": "mdbh.png",
+            "visitor_count": 300000,
+            "equipment": 6,
+            "downtown": "天河区"
+        },
+        {
+            "title": "保利·中汇广场",
+            "detail": "广州市天河区林和西路157号",
+            "yjzc_zb": "113.329918,23.154173",
+            "image": "blzhbb.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "天河区"
+        },
+        {
+            "title": "天盈创意园",
+            "detail": "广州市天河区棠安路288号",
+            "yjzc_zb": "113.383241,23.142112",
+            "image": "tycyy.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "天河区"
+        },
+        {
+            "title": "江左人佳(丽晶都汇广场店)",
+            "detail": "广州市天河区金穗路28号丽晶都汇广场三楼",
+            "yjzc_zb": "113.324627,23.129456",
+            "image": "ljdh.png",
+            "visitor_count": 20000,
+            "equipment": 8,
+            "downtown": "天河区"
+        },
+        {
+            "title": "天汇LOFT创意园",
+            "detail": "广州市天河区元岗横路16号",
+            "yjzc_zb": "113.349421,23.177762",
+            "image": "thcyy.png",
+            "visitor_count": 20000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "乐天大厦",
+            "detail": "广州市天河区科韵路棠安路188号",
+            "yjzc_zb": "113.38385,23.138964",
+            "image": "ltds.png",
+            "visitor_count": 20000,
+            "equipment": 1,
+            "downtown": "天河区"
+        },
+        {
+            "title": "乐天棠德广场",
+            "detail": "广州市天河区棠德南路42",
+            "yjzc_zb": "113.388157,23.138396",
+            "image": "tdgc.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "摩登百货(黄埔店)",
+            "detail": "广州市黄埔区黄埔东路1-9号东城广场一层",
+            "yjzc_zb": "113.455654,23.10681",
+            "image": "mdbhhp.png",
+            "visitor_count": 20000,
+            "equipment": 4,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "合生骏景广场",
+            "detail": "广州市天河区中山大道西1138号",
+            "yjzc_zb": "113.388509,23.131177",
+            "image": "hsjjgc.png",
+            "visitor_count": 40000,
+            "equipment": 8,
+            "downtown": "天河区"
+        },
+        {
+            "title": "金润国际",
+            "detail": "广州市\t天河区 东莞庄26号金淘国际大厦",
+            "yjzc_zb": "113.342376,23.156635",
+            "image": "jrgj.png",
+            "visitor_count": 40000,
+            "equipment": 9,
+            "downtown": "天河区"
+        },
+        {
+            "title": "百脑汇电脑城(天河路)",
+            "detail": "广州市天河区天河路598号",
+            "yjzc_zb": "113.345863,23.139944",
+            "image": "bnh.png",
+            "visitor_count": 40000,
+            "equipment": 5,
+            "downtown": "天河区"
+        },
+        {
+            "title": "佳兆业广场",
+            "detail": "广州市天河区体育西路191号",
+            "yjzc_zb": "113.327416,23.146169",
+            "image": "jzygc.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "天河区"
+        },
+        {
+            "title": "奥园养生广场",
+            "detail": "广州市番禺区桥南街德信路339号",
+            "yjzc_zb": "113.382424,22.919872",
+            "image": "ayysgc.png",
+            "visitor_count": 40000,
+            "equipment": 11,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "TIT润政广场",
+            "detail": "广州市海珠区江燕路37号",
+            "yjzc_zb": "113.285669,23.089809",
+            "image": "rzgc.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "纵横广场",
+            "detail": "广州市海珠区新港中路456号",
+            "yjzc_zb": "113.337186,23.101474",
+            "image": "zhgc.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "盈熙商贸中心",
+            "detail": "广州市海珠区江南大道南689-709号(单号)",
+            "yjzc_zb": "113.29376,23.079502",
+            "image": "yxsmzx.png",
+            "visitor_count": 20000,
+            "equipment": 8,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "燕汇广场",
+            "detail": "广州市海珠区江燕路108号",
+            "yjzc_zb": "113.283857,23.088481",
+            "image": "yhgc.png",
+            "visitor_count": 20000,
+            "equipment": 5,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "富力海珠城",
+            "detail": "广州市海珠区江南大道180号",
+            "yjzc_zb": "113.280377,23.101663",
+            "image": "flhzc.png",
+            "visitor_count": 60000,
+            "equipment": 12,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "合生生活天地",
+            "detail": "广州市海珠区昌岗中路188号",
+            "yjzc_zb": "113.281762,23.095056",
+            "image": "hsshtd.png",
+            "visitor_count": 40000,
+            "equipment": 6,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "合生广场",
+            "detail": "广州市\t海珠区 广州大道南249号",
+            "yjzc_zb": "113.3206,23.092009",
+            "image": "hsgc.png",
+            "visitor_count": 30000,
+            "equipment": 17,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "乐峰广场",
+            "detail": "广州市海珠区工业大道北106号",
+            "yjzc_zb": "113.265386,23.094621",
+            "image": "lfgc.png",
+            "visitor_count": 60000,
+            "equipment": 20,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "江南西人",
+            "detail": "广州市海珠区江南西26号",
+            "yjzc_zb": "113.278754,23.102096",
+            "image": "jnxr.png",
+            "visitor_count": 30000,
+            "equipment": 2,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "万科里",
+            "detail": "广州市海珠区江燕路101号",
+            "yjzc_zb": "113.285857,23.088701",
+            "image": "wkl.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "广州轻纺交易园",
+            "detail": "广州市海珠区新港西路82号",
+            "yjzc_zb": "113.297341,23.097002",
+            "image": "gzqfjyy.png",
+            "visitor_count": 20000,
+            "equipment": 13,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "广百新一城",
+            "detail": "广州市海珠区宝岗大道498号",
+            "yjzc_zb": "113.272575,23.100122",
+            "image": "gbxyc.png",
+            "visitor_count": 40000,
+            "equipment": 4,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "荔园新天地",
+            "detail": "广州市番禺区西环路1500号",
+            "yjzc_zb": "113.35227,22.925595",
+            "image": "lyxtd.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "奥园城市天地",
+            "detail": "广州市番禺区汉溪大道",
+            "yjzc_zb": "113.341707,22.997355",
+            "image": "aycstd.png",
+            "visitor_count": 40000,
+            "equipment": 15,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "金港湾购物广场",
+            "detail": "广州市番禺区亚运大道283号",
+            "yjzc_zb": "113.412956,22.943581",
+            "image": "jgwgwgc.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "潮联大厦",
+            "detail": "广州市\t番禺区 一零五国道大石段838",
+            "yjzc_zb": "113.313411,23.013373",
+            "image": "clds.png",
+            "visitor_count": 30000,
+            "equipment": 7,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "奥园越时代大厦-停车场",
+            "detail": "广州市\t番禺区石洲中路138号",
+            "yjzc_zb": "113.281917,23.001337",
+            "image": "ayysd.png",
+            "visitor_count": 30000,
+            "equipment": 8,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "奥园越时代广场",
+            "detail": "广州市番禺区汉溪大道283号汉溪大道西283号西座",
+            "yjzc_zb": "113.283969,22.99498",
+            "image": "ayysd.png",
+            "visitor_count": 30000,
+            "equipment": 16,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "105新地",
+            "detail": "广东省广州市番禺区一零五国道大石段474~480",
+            "yjzc_zb": "113.318856,23.026933",
+            "image": "ylwgc.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "海印又一城奥特莱斯广场",
+            "detail": "广州市番禺区番禺大道北383号",
+            "yjzc_zb": "113.354729,23.005201",
+            "image": "hyyyc.png",
+            "visitor_count": 40000,
+            "equipment": 31,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "番禺基盛万科里",
+            "detail": "广州市番禺区兴泰路296号",
+            "yjzc_zb": "113.394034,22.937516",
+            "image": "jswwkl.png",
+            "visitor_count": 40000,
+            "equipment": 32,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "奥园运动城",
+            "detail": "广州市\t番禺区 市良路9号",
+            "yjzc_zb": "113.370355,22.916816",
+            "image": "ayydc.png",
+            "visitor_count": 30000,
+            "equipment": 29,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "西丽广场",
+            "detail": "广州市番禺区西丽南路93号",
+            "yjzc_zb": "113.361035,22.942962",
+            "image": "xlgc.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "鸿禧优活中心",
+            "detail": "广州市番禺区光明北路281号",
+            "yjzc_zb": "113.367928,22.95766",
+            "image": "hxyhzx.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "富邦中心",
+            "detail": "广州市\t荔湾区 中山七路51号",
+            "yjzc_zb": "113.259107,23.146278",
+            "image": "fbzx.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "荔湾区"
+        },
+        {
+            "title": "中石化大厦",
+            "detail": "广州市\t天河区 体育西路191号",
+            "yjzc_zb": "113.327273,23.146502",
+            "image": "zsh.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "天河区"
+        },
+        {
+            "title": "保利中汇",
+            "detail": "广州市\t天河区 林和西路157号",
+            "yjzc_zb": "113.329693,23.154323",
+            "image": "blzh.png",
+            "visitor_count": 40000,
+            "equipment": 14,
+            "downtown": "天河区"
+        },
+        {
+            "title": "骏亿广场",
+            "detail": "广州市\t越秀区 越秀区38号",
+            "yjzc_zb": "113.273882,23.1296",
+            "image": "jygc.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "花地人家商业中心",
+            "detail": "广州市\t荔湾区 百花路8号",
+            "yjzc_zb": "113.236015,23.100948",
+            "image": "hdrjsyzx.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "荔湾区"
+        },
+        {
+            "title": "尚岛国际",
+            "detail": "广州市\t番禺区 南浦大道尚岛国际",
+            "yjzc_zb": "113.299359,23.040472",
+            "image": "sdgj.png",
+            "visitor_count": 30000,
+            "equipment": 2,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "若比邻环市西店",
+            "detail": "广州市\t荔湾区 环市西路49号",
+            "yjzc_zb": "113.249365,23.149189",
+            "image": "rbl.png",
+            "visitor_count": 30000,
+            "equipment": 7,
+            "downtown": "荔湾区"
+        },
+        {
+            "title": "广百广场",
+            "detail": "广州市\t南海区金沙洲 里水镇里广路2号",
+            "yjzc_zb": "113.239929,23.084469",
+            "image": "gbgcc.png",
+            "visitor_count": 20000,
+            "equipment": 12,
+            "downtown": "南海区"
+        },
+        {
+            "title": "云海大厦",
+            "detail": "广州市\t白云区 石井石沙路1951号",
+            "yjzc_zb": "113.246773,23.215587",
+            "image": "yhds.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "白云区"
+        },
+        {
+            "title": "伟诚广场",
+            "detail": "广州市\t天河区 黄埔大道中205号",
+            "yjzc_zb": "113.373817,23.128082",
+            "image": "wcgc.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "天河区"
+        },
+        {
+            "title": "伟诚商务大厦",
+            "detail": "广州市\t天河区 黄浦大道中207号",
+            "yjzc_zb": "113.374095,23.128343",
+            "image": "wcswds.png",
+            "visitor_count": 20000,
+            "equipment": 1,
+            "downtown": "天河区"
+        },
+        {
+            "title": "天河汇商业广场",
+            "detail": "广州市\t天河区 天河直街160号",
+            "yjzc_zb": "113.323704,23.145172",
+            "image": "thhsy.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "天河区"
+        },
+        {
+            "title": "东瑞大厦",
+            "detail": "广州市\t天河区 车陂祠堂大街2号",
+            "yjzc_zb": "113.406523,23.127291",
+            "image": "drds.png",
+            "visitor_count": 20000,
+            "equipment": 1,
+            "downtown": "天河区"
+        },
+        {
+            "title": "泰兴商业大厦",
+            "detail": "广州市\t越秀区 广州大道中599号",
+            "yjzc_zb": "113.32118,23.143021",
+            "image": "txsy.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "金峰城",
+            "detail": "广州市\t黄埔区 开创大道与科翔路交叉",
+            "yjzc_zb": "113.459344,23.184355",
+            "image": "jfc.png",
+            "visitor_count": 30000,
+            "equipment": 10,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "汇金广场",
+            "detail": "广州市\t白云区 白云大道北906号",
+            "yjzc_zb": "113.304594,23.225238",
+            "image": "hjgc.png",
+            "visitor_count": 20000,
+            "equipment": 9,
+            "downtown": "白云区"
+        },
+        {
+            "title": "领好广场",
+            "detail": "广州市\t黄埔区 黄埔东路2889号",
+            "yjzc_zb": "113.53114,23.091209",
+            "image": "lhgc.png",
+            "visitor_count": 40000,
+            "equipment": 2,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "侨林苑",
+            "detail": "广州市\t天河区 侨林街59号",
+            "yjzc_zb": "113.336278,23.149775",
+            "image": "qly.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "天河区"
+        },
+        {
+            "title": "颐和大厦",
+            "detail": "广州市\t天河区 广园东路瘦狗岭路413号",
+            "yjzc_zb": "113.341534,23.154777",
+            "image": "yhdsha.png",
+            "visitor_count": 40000,
+            "equipment": 7,
+            "downtown": "天河区"
+        },
+        {
+            "title": "隽园商务园",
+            "detail": "广州市\t天河区 天府路161号",
+            "yjzc_zb": "113.36841,23.131269",
+            "image": "jysw.png",
+            "visitor_count": 40000,
+            "equipment": 5,
+            "downtown": "天河区"
+        },
+        {
+            "title": "海峡两岸汇龙信息产业科技园",
+            "detail": "广州市\t白云区 鹤龙一路88号",
+            "yjzc_zb": "113.275036,23.218827",
+            "image": "hlxx.png",
+            "visitor_count": 20000,
+            "equipment": 2,
+            "downtown": "白云区"
+        },
+        {
+            "title": "恒鑫大厦",
+            "detail": "广州市\t天河区 水荫路2号",
+            "yjzc_zb": "113.316043,23.141065",
+            "image": "hxds.png",
+            "visitor_count": 30000,
+            "equipment": 1,
+            "downtown": "天河区"
+        },
+        {
+            "title": "君汇上品",
+            "detail": "广州市\t海珠区 江南大道中81、83号",
+            "yjzc_zb": "113.277594,23.110409",
+            "image": "jhsp.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "万科智慧广场",
+            "detail": "广州市\t天河区 华观路1933号",
+            "yjzc_zb": "113.413603,23.172766",
+            "image": "wkzhgc.png",
+            "visitor_count": 40000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "万科云一期",
+            "detail": "广州市\t天河区\t华观路1933号",
+            "yjzc_zb": "113.408651,23.174949",
+            "image": "wkyyq.png",
+            "visitor_count": 40000,
+            "equipment": 12,
+            "downtown": "天河区"
+        },
+        {
+            "title": "万科云城米酷",
+            "detail": "广州市\t天河区 华观路1933号",
+            "yjzc_zb": "113.412442,23.172731",
+            "image": "mk.png",
+            "visitor_count": 50000,
+            "equipment": 24,
+            "downtown": "天河区"
+        },
+        {
+            "title": "奥园国际",
+            "detail": "广州市\t番禺区\t兴南大道268号",
+            "yjzc_zb": "113.353056,23.012317",
+            "image": "aygj.png",
+            "visitor_count": 40000,
+            "equipment": 23,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "星荟购物广场",
+            "detail": "广州市\t黄埔区\t荔香路50号",
+            "yjzc_zb": "113.4514,23.102964",
+            "image": "xh.png",
+            "visitor_count": 30000,
+            "equipment": 2,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "珠光NT世联空间",
+            "detail": "广州市\t天河区 花城大道770号",
+            "yjzc_zb": "113.354513,23.122566",
+            "image": "slkj.png",
+            "visitor_count": 40000,
+            "equipment": 6,
+            "downtown": "天河区"
+        },
+        {
+            "title": "倾城大厦",
+            "detail": "广州市越秀区盘福路79号",
+            "yjzc_zb": "113.267252,23.142282",
+            "image": "gzqcds.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "天鹿大厦",
+            "detail": "广州市黄埔区天鹿南路100号",
+            "yjzc_zb": "113.433025,23.20389",
+            "image": "tlds.png",
+            "visitor_count": 30000,
+            "equipment": 4,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "保泰广场",
+            "detail": "广州市黄埔区丰乐北路116号",
+            "yjzc_zb": "113.459909,23.114445",
+            "image": "btgc.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "黄埔区"
+        },
+        {
+            "title": "时代TIT",
+            "detail": "广州市天河区东圃大马路8号",
+            "yjzc_zb": "113.407155,23.126099",
+            "image": "sdtit.png",
+            "visitor_count": 30000,
+            "equipment": 5,
+            "downtown": "天河区"
+        },
+        {
+            "title": "世联空间(永泰店)",
+            "detail": "广州市白云区学山塘街60",
+            "yjzc_zb": "113.309966,23.222943",
+            "image": "slkjyt.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "白云区"
+        },
+        {
+            "title": "南站未来域",
+            "detail": "广州市番禺区毓宏路1号",
+            "yjzc_zb": "113.316488,22.984344",
+            "image": "nzwly.png",
+            "visitor_count": 30000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "广州空港假日别墅酒店有限公司",
+            "detail": "广州市\t白云区 人和镇西成路8号",
+            "yjzc_zb": "113.29776,23.349087",
+            "image": "gzkxjrbsjd.png",
+            "visitor_count": 20000,
+            "equipment": 6,
+            "downtown": "白云区"
+        },
+        {
+            "title": "番山智库",
+            "detail": "广州市\t番禺区 番禺大道北537号",
+            "yjzc_zb": "113.370191,22.98476",
+            "image": "pszk.png",
+            "visitor_count": 40000,
+            "equipment": 16,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "美潮汇",
+            "detail": "广州市\t白云区 岗头大街40号",
+            "yjzc_zb": "113.260427,23.159442",
+            "image": "mch.png",
+            "visitor_count": 20000,
+            "equipment": 3,
+            "downtown": "白云区"
+        },
+        {
+            "title": "金山谷-一期",
+            "detail": "广州市\t番禺区 东艺路139号",
+            "yjzc_zb": "113.349878,22.985553",
+            "image": "jsg.png",
+            "visitor_count": 30000,
+            "equipment": 8,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "金山谷-二期",
+            "detail": "广州市\t番禺区 东艺路139号",
+            "yjzc_zb": "113.349986,22.983199",
+            "image": "jsg.png",
+            "visitor_count": 30000,
+            "equipment": 8,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "金山谷-三期",
+            "detail": "广州市\t番禺区 东艺路139号",
+            "yjzc_zb": "113.352914,22.984871",
+            "image": "jsg.png",
+            "visitor_count": 30000,
+            "equipment": 8,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "奥园城市广场（洛溪）",
+            "detail": "广州市\t番禺区如意路2号",
+            "yjzc_zb": "113.313348,23.047495",
+            "image": "lxayds.png",
+            "visitor_count": 35000,
+            "equipment": 3,
+            "downtown": "番禺区"
+        },
+        {
+            "title": "银华大厦",
+            "detail": "广州市\t海珠区 新港西路1号",
+            "yjzc_zb": "113.290382,23.102109",
+            "image": "yhdshz.png",
+            "visitor_count": 30000,
+            "equipment": 2,
+            "downtown": "海珠区"
+        },
+        {
+            "title": "萝岗奥园广场",
+            "detail": "广州市\t萝岗区 开创大道1942号",
+            "yjzc_zb": "113.503982,23.179946",
+            "image": "lgaygc.png",
+            "visitor_count": 40000,
+            "equipment": 15,
+            "downtown": "萝岗区"
+        },
+        {
+            "title": "华鼎商务中心",
+            "detail": "广州市\t南海区 广佛一路48号之一",
+            "yjzc_zb": "113.203661,23.119716",
+            "image": "hdswds.png",
+            "visitor_count": 30000,
+            "equipment": 6,
+            "downtown": "南海区"
+        },
+        {
+            "title": "保利绿地大都汇",
+            "detail": "广州市\t南海区 金隆路35号",
+            "yjzc_zb": "113.551489,22.801912",
+            "image": "blldddh.png",
+            "visitor_count": 30000,
+            "equipment": 11,
+            "downtown": "南海区"
+        },
+        {
+            "title": "乐天创新港",
+            "detail": "广州市\t南海区 乐天黄阁大道128号",
+            "yjzc_zb": "113.522881,22.832557",
+            "image": "ltcxg.png",
+            "visitor_count": 40000,
+            "equipment": 17,
+            "downtown": "南海区"
+        },
+        {
+            "title": "迎龙优创汇",
+            "detail": "广州市\t天河区 环村南街6-13号",
+            "yjzc_zb": "113.373482,23.200531",
+            "image": "ylych.png",
+            "visitor_count": 40000,
+            "equipment": 2,
+            "downtown": "天河区"
+        },
+        {
+            "title": "中辰广场",
+            "detail": "广州市\t天河区 龙口西路1号",
+            "yjzc_zb": "113.343458,23.139976",
+            "image": "zcgc.png",
+            "visitor_count": 50000,
+            "equipment": 7,
+            "downtown": "天河区"
+        },
+        {
+            "title": "乐天创意园",
+            "detail": "广州市\t天河区广园路科华街251号",
+            "yjzc_zb": "113.368718,23.152697",
+            "image": "ltcyy.png",
+            "visitor_count": 40000,
+            "equipment": 5,
+            "downtown": "天河区"
+        },
+        {
+            "title": "乐都汇",
+            "detail": "广州市\t天河区中山大道中1116号",
+            "yjzc_zb": "113.426909,23.121964",
+            "image": "ldh.png",
+            "visitor_count": 40000,
+            "equipment": 2,
+            "downtown": "天河区"
+        },
+        {
+            "title": "金燕大厦",
+            "detail": "广州市\t天河区燕岭路120号",
+            "yjzc_zb": "113.334063,23.164694",
+            "image": "jyds.png",
+            "visitor_count": 40000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "燕都商务大厦",
+            "detail": "广州市\t天河区粤垦路623号",
+            "yjzc_zb": "113.333162,23.164124",
+            "image": "ydswds.png",
+            "visitor_count": 40000,
+            "equipment": 5,
+            "downtown": "天河区"
+        },
+        {
+            "title": "汇德商业大厦",
+            "detail": "广州市\t天河区龙口大街6号",
+            "yjzc_zb": "113.405231,23.129328",
+            "image": "hdsygc.png",
+            "visitor_count": 40000,
+            "equipment": 3,
+            "downtown": "天河区"
+        },
+        {
+            "title": "中宇广场",
+            "detail": "广州市\t天河区天河北路628号",
+            "yjzc_zb": "113.348665,23.146657",
+            "image": "zygc.png",
+            "visitor_count": 50000,
+            "equipment": 4,
+            "downtown": "天河区"
+        },
+        {
+            "title": "凯蓝大厦",
+            "detail": "广州市\t天河区花城大道16号",
+            "yjzc_zb": "113.323161,23.125146",
+            "image": "klds.png",
+            "visitor_count": 70000,
+            "equipment": 2,
+            "downtown": "天河区"
+        },
+        {
+            "title": "轻出大厦",
+            "detail": "广州市\t越秀区德政南路50号",
+            "yjzc_zb": "113.282219,23.124297",
+            "image": "qcds.png",
+            "visitor_count": 50000,
+            "equipment": 1,
+            "downtown": "越秀区"
+        },
+        {
+            "title": "国际银行中心",
+            "detail": "广州市\t越秀区东风西路191号",
+            "yjzc_zb": "113.261197,23.13906",
+            "image": "gjyhzx.png",
+            "visitor_count": 50000,
+            "equipment": 8,
+            "downtown": "越秀区"
+        }
+    ]
+}

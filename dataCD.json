@@ -1,0 +1,257 @@
+{
+  "data": [
+    {
+      "title": "云股传媒成都分公司",
+      "detail": "地址:成都市高新天府大道中段530号东方希望天祥广场B座4202号",
+      "yjzc_zb": "104.074025,30.558212",
+      "color": "2",
+      "image": "ygcm.png",
+      "visitor_count": 40000,
+      "equipment": 0,
+      "downtown": "高新区"
+    },
+    {
+      "title": "福地广场家乐福",
+      "detail": "成都市新都区大丰镇大天路439号",
+      "yjzc_zb": "104.073742,30.765344",
+      "image": "fdgclf.png",
+      "visitor_count": 40000,
+      "equipment": 7,
+      "downtown": "新都区"
+    },
+    {
+      "title": "下一站都市",
+      "detail": "成都市武侯区武阳大道三段51号",
+      "yjzc_zb": "104.029297,30.63133",
+      "image": "xyzds.png",
+      "visitor_count": 50000,
+      "equipment": 6,
+      "downtown": "武侯区"
+    },
+    {
+      "title": "金阳不夜都",
+      "detail": "成都市武侯区西三环三段内侧草金立交旁万顺二路155号",
+      "yjzc_zb": "103.992218,30.656781",
+      "image": "jybyd.png",
+      "visitor_count": 80000,
+      "equipment": 5,
+      "downtown": "武侯区"
+    },
+    {
+      "title": "富顿中心",
+      "detail": "成都市武侯区金履二路167号",
+      "yjzc_zb": "103.991484,30.609422",
+      "image": "fdzx.png",
+      "visitor_count": 50000,
+      "equipment": 6,
+      "downtown": "武侯区"
+    },
+    {
+      "title": "蓝光·韩国城",
+      "detail": "成都市双流区珠江路600号",
+      "yjzc_zb": "104.015035,30.578842",
+      "image": "lghgc.png",
+      "visitor_count": 90000,
+      "equipment": 30,
+      "downtown": "双流区"
+    },
+    {
+      "title": "光华中心广场",
+      "detail": "成都市青羊区光华北三路88号",
+      "yjzc_zb": "103.970289,30.676356",
+      "image": "ghzxgc.png",
+      "visitor_count": 60000,
+      "equipment": 8,
+      "downtown": "青羊区"
+    },
+    {
+      "title": "金色夏威夷",
+      "detail": "成都市青羊区长顺下街与西街交汇处",
+      "yjzc_zb": "104.063112,30.679026",
+      "image": "jsxwy.png",
+      "visitor_count": 40000,
+      "equipment": 3,
+      "downtown": "青羊区"
+    },
+    {
+      "title": "中铁瑞成·远东百货",
+      "detail": "成都市青羊区人民中路二段68号",
+      "yjzc_zb": "104.072172,30.676218",
+      "image": "ztrcds.png",
+      "visitor_count": 70000,
+      "equipment": 1,
+      "downtown": "青羊区"
+    },
+    {
+      "title": "顺吉大厦",
+      "detail": "成都市青羊区顺城大街252号",
+      "yjzc_zb": "104.077672,30.670148",
+      "image": "sjds.png",
+      "visitor_count": 50000,
+      "equipment": 2,
+      "downtown": "青羊区"
+    },
+    {
+      "title": "蜀都万达广场",
+      "detail": "成都市郫都区望丛东路109号",
+      "yjzc_zb": "103.911424,30.813793",
+      "image": "sdwdgc.png",
+      "visitor_count": 90000,
+      "equipment": 10,
+      "downtown": "郫都区"
+    },
+    {
+      "title": "龙湖时代天街",
+      "detail": "成都市高新西区合作路89号",
+      "yjzc_zb": "103.927166,30.760248",
+      "image": "lhsdtj.png",
+      "visitor_count": 50000,
+      "equipment": 19,
+      "downtown": "郫都区"
+    },
+    {
+      "title": "重百汉正广场",
+      "detail": "成都市郫都区杜鹃路46号",
+      "yjzc_zb": "103.905931,30.804035",
+      "image": "cbhzgc.png",
+      "visitor_count": 70000,
+      "equipment": 4,
+      "downtown": "郫都区"
+    },
+    {
+      "title": "花好月圆广场",
+      "detail": "成都市金牛区蜀汉路89号",
+      "yjzc_zb": "104.034928,30.690432",
+      "image": "hhyy.png",
+      "visitor_count": 60000,
+      "equipment": 2,
+      "downtown": "金牛区"
+    },
+    {
+      "title": "中央天地广场",
+      "detail": "成都市金牛区五块石商贸大道48号",
+      "yjzc_zb": "104.071495,30.713889",
+      "image": "zytdgc.png",
+      "visitor_count": 70000,
+      "equipment": 19,
+      "downtown": "金牛区"
+    },
+    {
+      "title": "瑞升城北橡树林",
+      "detail": "成都市金牛区解放路一段20号",
+      "yjzc_zb": "104.09151,30.691798",
+      "image": "rscbxsl.png",
+      "visitor_count": 60000,
+      "equipment": 6,
+      "downtown": "金牛区"
+    },
+    {
+      "title": "龙湖金楠天街",
+      "detail": "成都市高新区晋阳路313号",
+      "yjzc_zb": "104.002582,30.654622",
+      "image": "lhjntj.png",
+      "visitor_count": 50000,
+      "equipment": 1,
+      "downtown": "高新区"
+    },
+    {
+      "title": "泛悦国际",
+      "detail": "成都市高新区武侯科华中路与长荣路交汇处(科华之星旁)",
+      "yjzc_zb": "104.085851,30.61984",
+      "image": "fygj.png",
+      "visitor_count": 50000,
+      "equipment": 3,
+      "downtown": "高新区"
+    },
+    {
+      "title": "花样年香年广场",
+      "detail": "成都市高新区吉泰五路88号",
+      "yjzc_zb": "104.072875,30.550893",
+      "image": "hynxngc.png",
+      "visitor_count": 60000,
+      "equipment": 2,
+      "downtown": "高新区"
+    },
+    {
+      "title": "东立国际广场",
+      "detail": "成都市成华区羊子山路68号",
+      "yjzc_zb": "104.102034,30.708957",
+      "image": "dlgjgc.png",
+      "visitor_count": 50000,
+      "equipment": 8,
+      "downtown": "成华区"
+    },
+    {
+      "title": "融锦城",
+      "detail": "成都市成华区羊子山西路88号",
+      "yjzc_zb": "104.103544,30.71121",
+      "image": "rjc.png",
+      "visitor_count": 60000,
+      "equipment": 8,
+      "downtown": "成华区"
+    },
+    {
+      "title": "上寓广场（鼎城上都）",
+      "detail": "成都市成华区二仙桥东路48号",
+      "yjzc_zb": "104.138253,30.681297",
+      "image": "dcsd.png",
+      "visitor_count": 50000,
+      "equipment": 5,
+      "downtown": "成华区"
+    },
+    {
+      "title": "蓝光·东方天地",
+      "detail": "成都市成华区崔家店路52号",
+      "yjzc_zb": "104.135338,30.666997",
+      "image": "lgdftd.png",
+      "visitor_count": 60000,
+      "equipment": 4,
+      "downtown": "成华区"
+    },
+    {
+      "title": "上古天地",
+      "detail": "成都市成华区龙潭路33号",
+      "yjzc_zb": "104.172273,30.710863",
+      "image": "sgtd.png",
+      "visitor_count": 50000,
+      "equipment": 9,
+      "downtown": "成华区"
+    },
+    {
+      "title": "阳光100米娅中心",
+      "detail": "成都市成华区塔山路东2.5环迎晖路交汇处",
+      "yjzc_zb": "104.149868,30.644446",
+      "image": "ygmyzx.png",
+      "visitor_count": 60000,
+      "equipment": 9,
+      "downtown": "成华区"
+    },
+    {
+      "title": "融创Nano",
+      "detail": "成都市天府新区华阳伏龙北巷",
+      "yjzc_zb": "104.065462,30.539515",
+      "image": "rcnano.png",
+      "visitor_count": 70000,
+      "equipment": 6,
+      "downtown": "天府新区"
+    },
+    {
+      "title": "成都北京街",
+      "detail": "成都市天府新区华阳街道府河路二段",
+      "yjzc_zb": "104.065351,30.501728",
+      "image": "bjj.png",
+      "visitor_count": 50000,
+      "equipment": 3,
+      "downtown": "天府新区"
+    },
+    {
+      "title": "同森金棕榈",
+      "detail": "成都市天府新区华阳街道协和下街588号",
+      "yjzc_zb": "104.050097,30.523399",
+      "image": "tsjzj.png",
+      "visitor_count": 70000,
+      "equipment": 5,
+      "downtown": "天府新区"
+    }
+  ]
+}
