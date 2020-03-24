@@ -183,12 +183,13 @@
     }
 
     $(function() {
+        var $coordinateJson;
         $.get("./dataGZ.json", function(res) {
-            var $coordinateJson = res;
+            $coordinateJson = res;
             loadPointData($coordinateJson, {
                 showDetails: false
-            }); 
-         });
+            });
+        });
 
         $('#s_i_map').on('keydown', function(e) {
             if (e.keyCode == 13) {
