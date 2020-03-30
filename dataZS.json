@@ -1,0 +1,22 @@
+{
+    "data": [{
+            "title": "云股传媒中山分公司",
+            "detail": "中山古镇新兴中路26号第5层009商铺",
+            "yjzc_zb": "113.191116,22.611612",
+            "color": "2",
+            "image": "pycl.png",
+            "visitor_count": 50000,
+            "equipment": 0,
+            "downtown": "古镇区"
+        },
+        {
+            "title": "中山五月花广场",
+            "detail": "中山市西区翠沙路23号棕櫊彩虹",
+            "yjzc_zb": "113.356788,22.546466",
+            "image": "zswyh.jpg",
+            "visitor_count": 40000,
+            "equipment": 6,
+            "downtown": "西区"
+        }
+    ]
+}

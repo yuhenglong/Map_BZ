@@ -19,7 +19,7 @@
             </div>
 
             <div class="one">
-                <label class="tit">成都云股传媒广告投放点</label>
+                <label class="tit">中山云股传媒广告投放点</label>
             </div>
 
             <div class="one" style="display:none;">
@@ -58,7 +58,7 @@
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
-<script type="text/javascript" src="js/jquery.bdmap_cd.js"></script>
+<script type="text/javascript" src="js/jquery.bdmap_zs.js"></script>
 
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=9eON9w7lfoGPM7dkhypB3Cw4E2zOWpAR"></script>
 
@@ -66,7 +66,7 @@
 <script type="text/javascript" src="js/bd/MarkerClusterer_min.js"></script>
 <script type="text/javascript">
     var $imgDir = 'img_cd/';
-    var $yjzc_zb = "104.074025,30.558212";
+    var $yjzc_zb = "113.191116,22.611612";
 
     function getNowFormatDate() {
         var date = new Date();
@@ -92,7 +92,7 @@
     });
     BDMapInit(map, {
         "isNumc": 1,
-        "city": "成都",
+        "city": "中山",
         "point": $yjzc_zb,
         "zoom": "15",
         "copyright": date
@@ -163,7 +163,7 @@
             };
         }
 
-        var content = '<div class="bdInfoWindow">' + "<img src='./img_cd/" + obj_option.image + "'>" + "<p>介绍：" + obj_option.detail + " </p>" + "<p>设备：" + obj_option.equipment + " 台<p/>" + "<p>人流量：" + obj_option.visitor_count + " 人次/天<p/>" + '</div>';
+        var content = '<div class="bdInfoWindow">' + "<img src='./img_zs/" + obj_option.image + "'>" + "<p>介绍：" + obj_option.detail + " </p>" + "<p>设备：" + obj_option.equipment + " 台<p/>" + "<p>人流量：" + obj_option.visitor_count + " 人次/天<p/>" + '</div>';
         var infoWindow = new BMap.InfoWindow(content, opts);
 
         map.openInfoWindow(infoWindow, point);
@@ -217,7 +217,7 @@
     }
 
     $(function() {
-        $.get("./dataCD.json", function(res) {
+        $.get("./dataZS.json", function(res) {
             var $coordinateJson = res;
             loadPointData($coordinateJson, {
                 showDetails: false
