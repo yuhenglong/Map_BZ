@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>云股传媒</title>
 
     <link type="text/css" rel="stylesheet" href="css/bdmapStyle.css" />
     <link rel="stylesheet" href="css/index.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <section class="section-bdmap">
-      <div class="map-search">
-        <div class="one">
-          <input
-            type="text"
-            id="s_i_map"
-            placeholder="地点名"
-            onFocus="this.placeholder=''"
-            onBlur="this.placeholder='地点名'"
-          />
-          <button type="button" id="btn_search_map">搜索</button>
-        </div>
+        <div class="map-search">
+            <div class="one">
+                <input type="text" id="s_i_map" placeholder="地点名" onFocus="this.placeholder=''" onBlur="this.placeholder='地点名'" />
+                <button type="button" id="btn_search_map">搜索</button>
+            </div>
 
-        <div class="one">
-          <label class="tit">广州云股传媒广告投放点</label>
-        </div>
+            <div class="one">
+                <label class="tit">广州云股传媒广告投放点</label>
+            </div>
 
-        <div class="one" style="display:none;">
-          <button id="btn" type="button" class="coust" style="display:none;">
+            <div class="one" style="display:none;">
+                <button id="btn" type="button" class="coust" style="display:none;">
             点位统计
           </button>
-          <span class="span-dis" style="display:none;">切换区域：</span>
-          <div class="select_box" style="display:none;">
-            <select name="selector" id="selector">
+                <span class="span-dis" style="display:none;">切换区域：</span>
+                <div class="select_box" style="display:none;">
+                    <select name="selector" id="selector">
               <option value="all">全部</option>
               <option value="天河区">天河区</option>
               <option value="越秀区">越秀区</option>
@@ -45,379 +40,365 @@
               <option value="番禺区">番禺区</option>
               <option value="南沙区">南沙区</option>
             </select>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <div class="mengban">
-      <div class="con_box ov">
-        <i class="close fr"></i>
-        <div id="container" style="height: 100%"></div>
-      </div>
+        <div class="con_box ov">
+            <i class="close fr"></i>
+            <div id="container" style="height: 100%"></div>
+        </div>
     </div>
     <section id="allmap"></section>
-  </body>
+</body>
+
 </html>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/jquery.bdmap_gz.js"></script>
-<script
-  type="text/javascript"
-  src="https://api.map.baidu.com/api?v=2.0&ak=9eON9w7lfoGPM7dkhypB3Cw4E2zOWpAR"
-></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=Go1QUZLk66twLA11oUcaiz7YRie35QkD"></script>
 <script type="text/javascript" src="js/bd/TextIconOverlay_min.js"></script>
 <script type="text/javascript" src="js/bd/MarkerClusterer_min.js"></script>
 <script type="text/javascript">
-  var $imgDir = "img_gz/";
-  var $yjzc_zb = "113.341145,23.131629";
+    var $imgDir = "img_gz/";
+    var $yjzc_zb = "113.341145,23.131629";
 
-  function getNowFormatDate() {
-    var date = new Date();
-    var seperator1 = " / ";
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-      month = "0" + month;
-    }
-    if (strDate >= 0 && strDate <= 9) {
-      strDate = "0" + strDate;
-    }
-    var currentdate = year + seperator1 + month + seperator1 + strDate;
-    return currentdate;
-  }
-  const date = getNowFormatDate();
-  var map = new BMap.Map("allmap", {
-    enableMapClick: false
-  });
-  BDMapInit(map, {
-    isNumc: 1,
-    city: "广州",
-    point: $yjzc_zb,
-    zoom: "15",
-    copyright: date
-  });
-
-  function loadPointData(dataJson, paramJson) {
-    eachPoint(dataJson, paramJson);
-    map.addEventListener("zoomend", function() {
-      var ZoomNum = map.getZoom();
-      var markerClusterer;
-      if (ZoomNum < 15) {
-        map.clearOverlays();
-        var markers = [];
-        $.each(dataJson.data, function(i, item) {
-          const addressArr = dataJson.data[i].yjzc_zb.split(",");
-          const obj_option = {};
-          obj_option.image = dataJson.data[i].image;
-          obj_option.title = dataJson.data[i].title;
-          obj_option.detail = dataJson.data[i].detail;
-          obj_option.equipment = dataJson.data[i].equipment;
-          obj_option.visitor_count = dataJson.data[i].visitor_count;
-
-          var point = new BMap.Point(addressArr[0], addressArr[1]);
-          var marker = new BMap.Marker(point);
-          addClickHandler(marker, dataJson, paramJson, point, obj_option);
-
-          markers.push(marker);
-        });
-        markerClusterer = new BMapLib.MarkerClusterer(map, {
-          markers: markers
-        });
-      } else {
-        eachPoint(dataJson, paramJson);
-      }
-    });
-  }
-
-  function addClickHandler(marker, dataJson, paramJson, point, obj_option) {
-    marker.addEventListener("click", function() {
-      openWinInfo(marker, dataJson, paramJson, point, obj_option);
-    });
-  }
-
-  function openWinInfo(marker, dataJson, paramJson, point, obj_option) {
-    const isPCequipt = document.body.clientWidth > 450;
-    var opts;
-    if (isPCequipt) {
-      opts = {
-        width: 450,
-        height: 550,
-        title: obj_option.title,
-        enableMessage: true
-      };
-    } else {
-      opts = {
-        width: 250,
-        height: 400,
-        title: obj_option.title,
-        enableMessage: true
-      };
-    }
-
-    var content =
-      '<div class="bdInfoWindow">' +
-      "<img src='./img_gz/" +
-      obj_option.image +
-      "'>" +
-      "<p>介绍：" +
-      obj_option.detail +
-      " </p>" +
-      "<p>设备：" +
-      obj_option.equipment +
-      " 台<p/>" +
-      "<p>人流量：" +
-      obj_option.visitor_count +
-      " 人次/天<p/>" +
-      "</div>";
-    var infoWindow = new BMap.InfoWindow(content, opts);
-    map.openInfoWindow(infoWindow, point);
-  }
-
-  function eachPoint(dataJson, paramJson) {
-    map.clearOverlays();
-    for (var i = 0; i < dataJson.data.length; i++) {
-      var $json = dataJson.data[i];
-      var title = $json.title,
-        description = $json.detail,
-        image = $json.image,
-        visitor_count = $json.visitor_count,
-        equipment = $json.equipment,
-        zuobiao = $json.yjzc_zb.split(","),
-        l_point = zuobiao[0],
-        r_point = zuobiao[1];
-
-      var img = "",
-        style = "";
-      if ($json.color == "1") {
-        img = "icon_locate_red.png";
-        style = "red";
-      }
-      if ($json.color == "2") {
-        img = "icon_locate_blue.png";
-        style = "blue";
-      }
-      if ($json.color == "3") {
-        img = "icon_locate_green.png";
-        style = "green";
-      }
-
-      if (img != "") img = $imgDir + img;
-
-      var $pointJson = {
-        l_point: l_point,
-        r_point: r_point,
-        title: title,
-        description: description,
-        style: style,
-        icon: img,
-        image: image,
-        visitor_count: visitor_count,
-        equipment: equipment
-      };
-      createMapPoint($pointJson, paramJson);
-    }
-  }
-
-  $(function() {
-    $.get("./dataGZ.json", function(res) {
-      var $coordinateJson = res;
-      loadPointData($coordinateJson, {
-        showDetails: false
-      });
-    });
-
-    $("#s_i_map").on("keydown", function(e) {
-      if (e.keyCode == 13) {
-        $("#btn_search_map").click();
-      }
-    });
-
-    function EchartsClick() {
-      // Echarts的代码
-      var dom = document.getElementById("container");
-      var myChart = echarts.init(dom);
-      var app = {};
-      option = null;
-      option = {
-        title: {
-          text: "广告分布饼状图",
-          subtext: "广州市",
-          x: "center"
-        },
-        tooltip: {
-          trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-          orient: "vertical",
-          left: "left",
-          data: [
-            "越秀区",
-            "海珠区",
-            "荔湾区",
-            "天河区",
-            "白云区",
-            "黄埔区",
-            "花都区",
-            "番禺区",
-            "南沙区"
-          ]
-        },
-        series: [
-          {
-            name: "区域点位数",
-            type: "pie",
-            radius: "55%",
-            center: ["50%", "60%"],
-            label: {
-              normal: {
-                formatter: "{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ",
-                backgroundColor: "#eee",
-                borderColor: "#aaa",
-                borderWidth: 1,
-                borderRadius: 4,
-
-                rich: {
-                  a: {
-                    color: "#999",
-                    lineHeight: 22,
-                    align: "center"
-                  },
-
-                  hr: {
-                    borderColor: "#aaa",
-                    width: "100%",
-                    borderWidth: 0.5,
-                    height: 0
-                  },
-                  b: {
-                    fontSize: 16,
-                    lineHeight: 33
-                  },
-                  per: {
-                    color: "#eee",
-                    backgroundColor: "#334455",
-                    padding: [2, 4],
-                    borderRadius: 2
-                  }
-                }
-              }
-            },
-            data: [
-              {
-                value: 15,
-                name: "越秀区"
-              },
-              {
-                value: 17,
-                name: "海珠区"
-              },
-              {
-                value: 4,
-                name: "荔湾区"
-              },
-              {
-                value: 31,
-                name: "天河区"
-              },
-              {
-                value: 25,
-                name: "白云区"
-              },
-              {
-                value: 10,
-                name: "黄埔区"
-              },
-              {
-                value: 1,
-                name: "花都区"
-              },
-              {
-                value: 22,
-                name: "番禺区"
-              },
-              {
-                value: 1,
-                name: "南沙区"
-              }
-            ],
-            itemStyle: {
-              emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: "rgba(0, 0, 0, 0.5)"
-              }
-            }
-          }
-        ]
-      };
-      if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-      }
-    }
-
-    $("#btn").click(function() {
-      $(".mengban").show();
-      EchartsClick();
-    });
-
-    $(".close").click(function() {
-      $(".mengban").hide();
-    });
-    $(".mengban").click(function() {
-      $(".mengban").hide();
-    });
-    $(".con_box").click(function(e) {
-      e.stopPropagation();
-    });
-
-    $("#selector").change(function() {
-      const text = $(this)
-        .find("option:selected")
-        .val();
-      const newArr = [];
-      $coordinateJson.data.forEach(function(item) {
-        if (item.downtown == text) {
-          newArr.push(item);
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = " / ";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
         }
-        const obj = {};
-        obj.data = newArr;
-
-        map.clearOverlays();
-        loadPointData(obj, {
-          showDetails: false
-        });
-      });
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+    const date = getNowFormatDate();
+    var map = new BMap.Map("allmap", {
+        enableMapClick: false
+    });
+    BDMapInit(map, {
+        isNumc: 1,
+        city: "广州",
+        point: $yjzc_zb,
+        zoom: "15",
+        copyright: date
     });
 
-    function myFun() {
-      var size = new BMap.Size(30, 30);
-      var iconOptions = {
-        anchor: new BMap.Size(5, 10)
-      };
-      var icon = new BMap.Icon(
-        "./img_gz/icon_locate_green.png",
-        size,
-        iconOptions
-      );
-      const $iconJson = {
-        icon: icon
-      };
-      var pp = local.getResults().getPoi(0).point;
-      map.centerAndZoom(pp, 18);
-      map.addOverlay(new BMap.Marker(pp, $iconJson));
+    function loadPointData(dataJson, paramJson) {
+        eachPoint(dataJson, paramJson);
+        map.addEventListener("zoomend", function() {
+            var ZoomNum = map.getZoom();
+            var markerClusterer;
+            if (ZoomNum < 15) {
+                map.clearOverlays();
+                var markers = [];
+                $.each(dataJson.data, function(i, item) {
+                    const addressArr = dataJson.data[i].yjzc_zb.split(",");
+                    const obj_option = {};
+                    obj_option.image = dataJson.data[i].image;
+                    obj_option.title = dataJson.data[i].title;
+                    obj_option.detail = dataJson.data[i].detail;
+                    obj_option.equipment = dataJson.data[i].equipment;
+                    obj_option.visitor_count = dataJson.data[i].visitor_count;
+
+                    var point = new BMap.Point(addressArr[0], addressArr[1]);
+                    var marker = new BMap.Marker(point);
+                    addClickHandler(marker, dataJson, paramJson, point, obj_option);
+
+                    markers.push(marker);
+                });
+                markerClusterer = new BMapLib.MarkerClusterer(map, {
+                    markers: markers
+                });
+            } else {
+                eachPoint(dataJson, paramJson);
+            }
+        });
     }
 
-    var btnSearch = document.getElementById("btn_search_map");
-    btnSearch.addEventListener("click", function() {
-      map.clearOverlays();
-      local = new BMap.LocalSearch(map, {
-        onSearchComplete: myFun
-      });
-      local.search(document.getElementById("s_i_map").value);
+    function addClickHandler(marker, dataJson, paramJson, point, obj_option) {
+        marker.addEventListener("click", function() {
+            openWinInfo(marker, dataJson, paramJson, point, obj_option);
+        });
+    }
+
+    function openWinInfo(marker, dataJson, paramJson, point, obj_option) {
+        const isPCequipt = document.body.clientWidth > 450;
+        var opts;
+        if (isPCequipt) {
+            opts = {
+                width: 450,
+                height: 550,
+                title: obj_option.title,
+                enableMessage: true
+            };
+        } else {
+            opts = {
+                width: 250,
+                height: 400,
+                title: obj_option.title,
+                enableMessage: true
+            };
+        }
+
+        var content =
+            '<div class="bdInfoWindow">' +
+            "<img src='./img_gz/" +
+            obj_option.image +
+            "'>" +
+            "<p>介绍：" +
+            obj_option.detail +
+            " </p>" +
+            "<p>设备：" +
+            obj_option.equipment +
+            " 台<p/>" +
+            "<p>人流量：" +
+            obj_option.visitor_count +
+            " 人次/天<p/>" +
+            "</div>";
+        var infoWindow = new BMap.InfoWindow(content, opts);
+        map.openInfoWindow(infoWindow, point);
+    }
+
+    function eachPoint(dataJson, paramJson) {
+        map.clearOverlays();
+        for (var i = 0; i < dataJson.data.length; i++) {
+            var $json = dataJson.data[i];
+            var title = $json.title,
+                description = $json.detail,
+                image = $json.image,
+                visitor_count = $json.visitor_count,
+                equipment = $json.equipment,
+                zuobiao = $json.yjzc_zb.split(","),
+                l_point = zuobiao[0],
+                r_point = zuobiao[1];
+
+            var img = "",
+                style = "";
+            if ($json.color == "1") {
+                img = "icon_locate_red.png";
+                style = "red";
+            }
+            if ($json.color == "2") {
+                img = "icon_locate_blue.png";
+                style = "blue";
+            }
+            if ($json.color == "3") {
+                img = "icon_locate_green.png";
+                style = "green";
+            }
+
+            if (img != "") img = $imgDir + img;
+
+            var $pointJson = {
+                l_point: l_point,
+                r_point: r_point,
+                title: title,
+                description: description,
+                style: style,
+                icon: img,
+                image: image,
+                visitor_count: visitor_count,
+                equipment: equipment
+            };
+            createMapPoint($pointJson, paramJson);
+        }
+    }
+
+    $(function() {
+        $.get("./dataGZ.json", function(res) {
+            var $coordinateJson = res;
+            loadPointData($coordinateJson, {
+                showDetails: false
+            });
+        });
+
+        $("#s_i_map").on("keydown", function(e) {
+            if (e.keyCode == 13) {
+                $("#btn_search_map").click();
+            }
+        });
+
+        function EchartsClick() {
+            // Echarts的代码
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+            option = {
+                title: {
+                    text: "广告分布饼状图",
+                    subtext: "广州市",
+                    x: "center"
+                },
+                tooltip: {
+                    trigger: "item",
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: "vertical",
+                    left: "left",
+                    data: [
+                        "越秀区",
+                        "海珠区",
+                        "荔湾区",
+                        "天河区",
+                        "白云区",
+                        "黄埔区",
+                        "花都区",
+                        "番禺区",
+                        "南沙区"
+                    ]
+                },
+                series: [{
+                    name: "区域点位数",
+                    type: "pie",
+                    radius: "55%",
+                    center: ["50%", "60%"],
+                    label: {
+                        normal: {
+                            formatter: "{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ",
+                            backgroundColor: "#eee",
+                            borderColor: "#aaa",
+                            borderWidth: 1,
+                            borderRadius: 4,
+
+                            rich: {
+                                a: {
+                                    color: "#999",
+                                    lineHeight: 22,
+                                    align: "center"
+                                },
+
+                                hr: {
+                                    borderColor: "#aaa",
+                                    width: "100%",
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                b: {
+                                    fontSize: 16,
+                                    lineHeight: 33
+                                },
+                                per: {
+                                    color: "#eee",
+                                    backgroundColor: "#334455",
+                                    padding: [2, 4],
+                                    borderRadius: 2
+                                }
+                            }
+                        }
+                    },
+                    data: [{
+                        value: 15,
+                        name: "越秀区"
+                    }, {
+                        value: 17,
+                        name: "海珠区"
+                    }, {
+                        value: 4,
+                        name: "荔湾区"
+                    }, {
+                        value: 31,
+                        name: "天河区"
+                    }, {
+                        value: 25,
+                        name: "白云区"
+                    }, {
+                        value: 10,
+                        name: "黄埔区"
+                    }, {
+                        value: 1,
+                        name: "花都区"
+                    }, {
+                        value: 22,
+                        name: "番禺区"
+                    }, {
+                        value: 1,
+                        name: "南沙区"
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: "rgba(0, 0, 0, 0.5)"
+                        }
+                    }
+                }]
+            };
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+        }
+
+        $("#btn").click(function() {
+            $(".mengban").show();
+            EchartsClick();
+        });
+
+        $(".close").click(function() {
+            $(".mengban").hide();
+        });
+        $(".mengban").click(function() {
+            $(".mengban").hide();
+        });
+        $(".con_box").click(function(e) {
+            e.stopPropagation();
+        });
+
+        $("#selector").change(function() {
+            const text = $(this)
+                .find("option:selected")
+                .val();
+            const newArr = [];
+            $coordinateJson.data.forEach(function(item) {
+                if (item.downtown == text) {
+                    newArr.push(item);
+                }
+                const obj = {};
+                obj.data = newArr;
+
+                map.clearOverlays();
+                loadPointData(obj, {
+                    showDetails: false
+                });
+            });
+        });
+
+        function myFun() {
+            var size = new BMap.Size(30, 30);
+            var iconOptions = {
+                anchor: new BMap.Size(5, 10)
+            };
+            var icon = new BMap.Icon(
+                "./img_gz/icon_locate_green.png",
+                size,
+                iconOptions
+            );
+            const $iconJson = {
+                icon: icon
+            };
+            var pp = local.getResults().getPoi(0).point;
+            map.centerAndZoom(pp, 18);
+            map.addOverlay(new BMap.Marker(pp, $iconJson));
+        }
+
+        var btnSearch = document.getElementById("btn_search_map");
+        btnSearch.addEventListener("click", function() {
+            map.clearOverlays();
+            local = new BMap.LocalSearch(map, {
+                onSearchComplete: myFun
+            });
+            local.search(document.getElementById("s_i_map").value);
+        });
     });
-  });
 </script>
